@@ -1,26 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Security Headers -->
+        <meta http-equiv="X-Frame-Options" content="DENY">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+
+        <title>30 Second Drawing - UniiLanguage</title>
+        <meta name="description" content="Draw your silly sentence in 30 seconds!">
+
         <link rel="stylesheet" href="../index.css">
-        <title>30 Second Drawing</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"
-            http-equiv="X-UA-Compatible" content="IE=edge" charset="UTF-8">
 		<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
 		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <!-- Clickjacking Protection -->
+        <script>
+            if (window.top !== window.self) {
+                window.top.location = window.self.location;
+            }
+        </script>
 	    </head>
 
     <body class = "drawing2" style="background-color:#EBF5FF;">
         <div class="drawingSquare">
             <h1> Draw: </h1>
-            <div class="prompt">
+            <div class="prompt" role="heading" aria-level="2">
                 <script src='../prompt generation/prompt_generator.js'></script>
                 <script src='../prompt generation/prek3.js'></script>
                 <script>document.write(getPassedPrompt())</script>
             </div>
-            <img src="../images/timer gifs/timer30.gif">
+            <img src="../images/timer gifs/timer30.gif" alt="30 second timer animation">
         </div>
-        <canvas id="canvas" style="border:1px solid"></canvas>
+
+        <!-- Drawing Toolbar -->
+        <div class="drawing-toolbar" role="toolbar" aria-label="Drawing tools">
+            <button id="penBtn" class="tool-btn active" aria-label="Pen tool" title="Pen">
+                <span class="tool-icon">✏️</span>
+            </button>
+            <button id="eraserBtn" class="tool-btn" aria-label="Eraser tool" title="Eraser">
+                <span class="tool-icon">🧹</span>
+            </button>
+            <label for="colorPicker" class="tool-label">Color:</label>
+            <input type="color" id="colorPicker" class="tool-input" aria-label="Choose pen color">
+            <label for="brushSize" class="tool-label">Size:</label>
+            <input type="range" id="brushSize" min="1" max="20" value="5" class="tool-input" aria-label="Brush size">
+            <button id="clearBtn" class="tool-btn" aria-label="Clear canvas" title="Clear">
+                <span class="tool-icon">🗑️</span>
+            </button>
+        </div>
+
+        <canvas id="canvas" style="border:1px solid" role="img" aria-label="Drawing canvas"></canvas>
 		<span class="blackbg" id="myPopupBlackBg"></span>
 		<span class="popupbg" id="myPopupBg"></span>
 		<span class="popup0">
@@ -38,6 +71,13 @@
 		</span>
         <br>
         <button hidden="hidden" id="save">Save Drawing</button>
-        <script src="../drawing javscript files/drawing30.js"></script>
+        <script src="../drawing javscript files/unified-drawing.js"></script>
+        <script>
+            // Initialize with 30 second timer
+            let drawingApp;
+            window.addEventListener('DOMContentLoaded', () => {
+                drawingApp = initDrawingCanvas(30);
+            });
+        </script>
     </body>
 </html>

@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="../index.css">
-        <title>How to play page 2</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Security Headers -->
+        <meta http-equiv="X-Frame-Options" content="DENY">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+
+        <title>Game Complete - UniiLanguage</title>
+        <meta name="description" content="Congratulations! You completed the UniiLanguage drawing game!">
+
+        <link rel="stylesheet" href="../index.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
 		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <!-- Clickjacking Protection -->
+        <script>
+            if (window.top !== window.self) {
+                window.top.location = window.self.location;
+            }
+        </script>
     </head>
     <body style="background-color:#EBF5FF;">
-        <div class="endScreen">
-            <img src="../images/characters/post_game_characters.svg">
-            <h1> Good Job! </h1>
-            <p> Want to play again? </p>
-            <a href="Drawing_10_sec.html">
-                <button>Play Again!</button>
-            </a>
-            <br>
-			<a href="index.html">
-            	<button class="save"> Main Menu </button>
-			</a>
-        </div>
+        <main role="main">
+            <div class="endScreen">
+                <img src="../images/characters/post_game_characters.svg" alt="Celebrating characters">
+                <h1> Good Job! </h1>
+                <p> Want to play again? </p>
+                <a href="Drawing_10_sec.html" aria-label="Play the game again">
+                    <button>Play Again!</button>
+                </a>
+                <br>
+                <a href="index.html" aria-label="Return to main menu">
+                    <button class="save"> Main Menu </button>
+                </a>
+            </div>
+        </main>
     </body>
 </html>
