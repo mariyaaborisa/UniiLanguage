@@ -1,27 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="../index.css">
-        <title>How to play page 1</title>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Security Headers -->
+        <meta http-equiv="X-Frame-Options" content="DENY">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+
+        <title>How to Play - UniiLanguage</title>
+        <meta name="description" content="Learn how to play UniiLanguage drawing game">
+
+        <link rel="stylesheet" href="../index.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
 		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <!-- Clickjacking Protection -->
+        <script>
+            if (window.top !== window.self) {
+                window.top.location = window.self.location;
+            }
+        </script>
     </head>
     <body style="background-color:#EEEAFF;">
-        <div class="h2pSquare">
-            <img class="character1" src="../images/characters/drawing_triangle.gif">
-            <h1>
-                How to Play
-            </h1>
-            <p>
-                You will see a silly sentence in the next slide. <br>
-                Then you will draw that sentence <br>
-                3 times.
-            </p>
-            <a href="h2p2.html">
-                <button class="next">Next</button>
-            </a>
-        </div>
+        <main role="main">
+            <div class="h2pSquare">
+                <img class="character1" src="../images/characters/drawing_triangle.gif" alt="Animated character drawing a triangle">
+                <h1>
+                    How to Play
+                </h1>
+                <p>
+                    You will see a silly sentence in the next slide. <br>
+                    Then you will draw that sentence <br>
+                    3 times.
+                </p>
+                <a href="h2p2.html" aria-label="Continue to next instructions">
+                    <button class="next">Next</button>
+                </a>
+            </div>
+        </main>
     </body>
 </html>
