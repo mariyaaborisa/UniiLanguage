@@ -1,8 +1,102 @@
-var prek3 = new Map([
-	["Formats", ["The %Adjective% %Noun% %Intransitive Verb%.","The %Adjective% %Noun% %Transitive Verb% the %Noun%.","The %Adjective% %Noun% %Prepositional Verb% the %Adjective% %Noun%."]],
-	["Adjective", ["big","little","new","pretty","round","best","cold","fast","clean","far","kind","light","long","small","warm"]],
-	["Transitive Verb", ["teaches","finds","helps","runs to","sees","saw","stops","takes","thanks","buys","calls","pulls","washes","brings","carries","cleans","draws","holds"]],
-	["Prepositional Verb", ["goes to","jumps over","looks at","plays with","flies over","swims with","hi-fives","waves to"]],
-	["Noun", ["cat","dog","frog","child","butterfly","robot","adult","bird","fish","bear","lion","zebra","mailman","teacher","nurse"]],
-	["Intransitive Verb", ["runs","eats","flies","thinks","reads","sings","sits","sleeps","works","writes","drinks","falls","grows","laughs"]],
+const prek3 = new Map([
+  [
+    "Formats",
+    [
+      "The %Adjective% %Noun% %Intransitive Verb%.",
+      "The %Adjective% %Noun% %Transitive Verb% the %Noun%.",
+      "The %Adjective% %Noun% %Prepositional Verb% the %Adjective% %Noun%."
+    ]
+  ],
+  [
+    "Adjective",
+    [
+      "big",
+      "small",
+      "red",
+      "tan",
+      "glad",
+      "silly",
+      "sunny",
+      "brave",
+      "kind",
+      "quick",
+      "soft",
+      "smart"
+    ]
+  ],
+  [
+    "Transitive Verb",
+    [
+      "hugs",
+      "helps",
+      "pats",
+      "feeds",
+      "finds",
+      "pokes",
+      "sees",
+      "tells",
+      "holds",
+      "brings",
+      "shows",
+      "draws",
+      "hands",
+      "gives",
+      "packs"
+    ]
+  ],
+  [
+    "Prepositional Verb",
+    [
+      "jumps over",
+      "looks at",
+      "plays with",
+      "runs with",
+      "sits by",
+      "waves to",
+      "walks with",
+      "stands by"
+    ]
+  ],
+  [
+    "Noun",
+    [
+      "cat",
+      "dog",
+      "frog",
+      "kid",
+      "bird",
+      "duck",
+      "fish",
+      "pig",
+      "hen",
+      "bat",
+      "bug",
+      "fox",
+      "pup",
+      "pal",
+      "mom",
+      "dad"
+    ]
+  ],
+  [
+    "Intransitive Verb",
+    [
+      "runs",
+      "hops",
+      "hums",
+      "sits",
+      "spins",
+      "grins",
+      "plays",
+      "jogs",
+      "drums",
+      "claps",
+      "skips",
+      "smiles",
+      "stands",
+      "marches"
+    ]
+  ]
 ]);
+
+window.prek3 = prek3;
