@@ -1,6 +1,7 @@
 /* -------- Backgrounds ------------*/
 body {
     background-image:url('./images/backgrounds/background3.gif'); animation-direction: alternate; background-repeat: repeat;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body.drawing1 {
