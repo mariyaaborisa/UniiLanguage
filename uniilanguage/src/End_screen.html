@@ -1,46 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Security Headers (Compatible with GitHub Pages & Netlify) -->
-        <meta http-equiv="X-Frame-Options" content="DENY">
-        <meta http-equiv="X-Content-Type-Options" content="nosniff">
-        <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-
-        <title>Game Complete - UniiLanguage</title>
-        <meta name="description" content="Congratulations! You completed the UniiLanguage drawing game!">
-
+        <link rel="stylesheet" href="../fonts.css">
         <link rel="stylesheet" href="../index.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-        <!-- Microsoft Clarity Analytics -->
-        <script src="./components/clarity-tracker.js" defer></script>
-
-        <!-- Clickjacking Protection -->
-        <script>
-            if (window.top !== window.self) {
-                window.top.location = window.self.location;
-            }
-        </script>
+        <title>How to play page 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body style="background-color:#EBF5FF;">
-        <main role="main">
-            <div class="endScreen">
-                <img src="../images/characters/post_game_characters.svg" alt="Celebrating characters">
-                <h1> Good Job! </h1>
-                <p> Want to play again? </p>
-                <a href="Drawing_10_sec.html" aria-label="Play the game again">
-                    <button>Play Again!</button>
-                </a>
-                <br>
-                <a href="index.html" aria-label="Return to main menu">
-                    <button class="save"> Main Menu </button>
-                </a>
-            </div>
-        </main>
+        <div class="endScreen">
+            <img src="../images/characters/post_game_characters.svg">
+            <h1> Good Job! </h1>
+            <p> Want to play again? </p>
+            <a href="Drawing_10_sec.html">
+                <button>Play Again!</button>
+            </a>
+            <br>
+			<a href="index.html">
+            	<button class="save"> Main Menu </button>
+			</a>
+        </div>
     </body>
 </html>
