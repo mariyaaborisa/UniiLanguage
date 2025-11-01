@@ -1,39 +1,9 @@
-// Encapsulate previous prompt in a secure module
-const PromptManager = (function() {
-	let previous = "";
-
-	// Sanitize text to prevent XSS
-	function sanitizeText(text) {
-		if (!text) return '';
-		const div = document.createElement('div');
-		div.textContent = text;
-		return div.innerHTML;
-	}
-
-	return {
-		setPrevious: function(value) {
-			previous = sanitizeText(value);
-		},
-		getPrevious: function() {
-			return previous;
-		}
-	};
-})();
-
-// Maintain backward compatibility
 let previous = "";
 
 function getPassedPrompt() {
 	var params = getParams();
 	var passedPrompt = params["prompt"];
-
-	// Sanitize to prevent XSS attacks
-	if (passedPrompt) {
-		const div = document.createElement('div');
-		div.textContent = passedPrompt;
-		return div.innerHTML;
-	}
-	return '';
+	return passedPrompt;
 }
 
 function getParams() {
@@ -71,9 +41,7 @@ function generatePrompt(promptset) {
 		let substitution = resolveFormat(placeholder, promptset);
 		resolved = resolved.concat(substitution);
 	}
-	// Store in both legacy and secure storage
 	previous = resolved;
-	PromptManager.setPrevious(resolved);
 	return resolved;
 }
 
