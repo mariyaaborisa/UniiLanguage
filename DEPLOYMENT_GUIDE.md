@@ -434,7 +434,7 @@ Netlify creates preview URLs for pull requests:
 
 ### Fonts Not Loading
 
-**Symptom**: Generic/system fonts instead of Open Sans
+**Symptom**: Generic/system fonts instead of Fredoka
 
 **Solutions**:
 1. Check network connection

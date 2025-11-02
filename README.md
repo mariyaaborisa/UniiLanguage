@@ -245,7 +245,7 @@ All rights reserved.
 
 ## 🙏 Acknowledgments
 
-- **Fonts**: Google Fonts (Open Sans)
+- **Fonts**: Google Fonts (Fredoka)
 - **Analytics**: Microsoft Clarity
 - **Hosting**: GitHub Pages & Netlify
 - **Design**: Unii Learning Labs
