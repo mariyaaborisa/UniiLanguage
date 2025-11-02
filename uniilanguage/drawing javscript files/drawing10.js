@@ -1,11 +1,20 @@
 const canvas2 = document.getElementById("canvas")
 const canvas = canvas2.getContext('2d');
+const roundTransition = document.getElementById("roundTransition")
+const nextRoundButton = document.getElementById("nextRoundButton")
+const saveDrawingButton = document.getElementById("saveDrawingButton")
 var timer = 10
 
 canvas2.style = "position: absolute; top: 25%; left: 24%; right: 0px; bottom: 0px; margin: 0px; border: 5px solid rgba(0, 0, 0, 0.2); border-radius: 30px;";
 
 window.addEventListener("resize", resize)
 resize()
+if (roundTransition) {
+    roundTransition.setAttribute('aria-hidden', 'true')
+}
+if (saveDrawingButton) {
+    saveDrawingButton.addEventListener('click', onSave)
+}
 let mousePos = {
     x:0,
     y:0
@@ -30,14 +39,14 @@ function draw(e){
     if (e.buttons !=1){
         return;
     }
-	canvas.beginPath();
-	canvas.lineCap = "round"
-	canvas.strokeStyle = pen_color;
-	canvas.lineWidth = 5
-	canvas.moveTo(mousePos.x, mousePos.y)
-	mousePosition(e)
-	canvas.lineTo(mousePos.x, mousePos.y)
-	canvas.stroke()
+    canvas.beginPath();
+    canvas.lineCap = "round"
+    canvas.strokeStyle = pen_color;
+    canvas.lineWidth = 5
+    canvas.moveTo(mousePos.x, mousePos.y)
+    mousePosition(e)
+    canvas.lineTo(mousePos.x, mousePos.y)
+    canvas.stroke()
 }
 
 var pen_color = randomColor();
@@ -62,29 +71,27 @@ function onSave(){
     })
 }
 
+function showRoundTransition(){
+    if (!roundTransition) {
+        return
+    }
+    roundTransition.hidden = false
+    roundTransition.setAttribute('aria-hidden', 'false')
+    requestAnimationFrame(() => {
+        roundTransition.classList.add('is-visible')
+    })
+}
+
 function timerFunction(){
     timer--;
-    if (timer ==0){
-		var popup0 = document.getElementById("myPopup0");
-		popup0.style.visibility = "Visible";
-		var blackbg = document.getElementById("myPopupBlackBg");
-		blackbg.style.visibility = "Visible";
-		var popupbg = document.getElementById("myPopupBg");
-		popupbg.style.visibility = "Visible";
-		var popup1 = document.getElementById("myPopup1");
-		popup1.style.visibility = "Visible";
-		var popup2 = document.getElementById("myPopup2");
-		popup2.style.visibility = "Visible";
-		window.removeEventListener("mousemove", draw)
-        //if (window.confirm("Would you like to save the painting?")){
-        //    onSave()
-        //}
-        //if (window.confirm("Ready to move onto the 30 second round?")){
-        //    window.location.href = "../src/Drawing_30_sec.html?prompt=" + previous;
-        //}
+    if (timer === 0){
+        window.removeEventListener("mousemove", draw)
+        showRoundTransition()
+        if (nextRoundButton){
+            nextRoundButton.focus()
+        }
+        clearInterval(timerHandle)
     }
 }
 
-document.querySelector("#save").addEventListener('click', onSave)
-
-setInterval(timerFunction, 1000)
+const timerHandle = setInterval(timerFunction, 1000)

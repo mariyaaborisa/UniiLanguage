@@ -19,23 +19,20 @@
             <img src="../images/timer gifs/timer60.gif" alt="Timer counting down from sixty seconds" loading="lazy">
         </div>
         <canvas id="canvas" style="border:1px solid"></canvas>
-		<span class="blackbg" id="myPopupBlackBg"></span>
-		<span class="popupbg" id="myPopupBg"></span>
-		<span class="popup0">
-			<p class="popuptext" id="myPopup0">Great Job!<br><br>
-			<span style="color: #676767;font-family: 'Open Sans';font-style: normal;font-weight: 700;font-size: 24px;line-height: 22px">
-			You completed all the drawings!
-			</span>
-			</p>
-		</span>
-                <span class="popup1" onclick="location.href='../src/End_screen.html'">
-                        <button class="popuptext" id="myPopup1" type="button">Finish Game</button>
-                </span>
-                <span class="popup2" onclick="onSave()">
-                        <button class="popuptext" id="myPopup2" type="button">Save Drawing</button>
-                </span>
-        <br>
-        <button hidden="hidden" id="save" type="button">Save Drawing</button>
+        <div class="round-transition" id="roundTransition" hidden aria-hidden="true">
+            <div class="round-transition__text" role="status" aria-live="assertive">
+                <h2 class="round-transition__title">You did it!</h2>
+                <p class="round-transition__subtitle">You've finished every round. Save your drawing or head to the finish screen.</p>
+            </div>
+            <div class="round-transition__actions">
+                <button class="round-transition__button round-transition__button--primary" id="nextRoundButton" type="button" onclick="location.href='../src/End_screen.html'">
+                    Go to the finish screen
+                </button>
+                <button class="round-transition__button round-transition__button--secondary" id="saveDrawingButton" type="button">
+                    Save this drawing
+                </button>
+            </div>
+        </div>
         <script src="../drawing javscript files/drawing60.js"></script>
     </body>
 </html>
