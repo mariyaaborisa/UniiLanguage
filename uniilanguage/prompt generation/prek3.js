@@ -2,99 +2,136 @@ const prek3 = new Map([
   [
     "Formats",
     [
-      "The %Adjective% %Noun% %Intransitive Verb%.",
-      "The %Adjective% %Noun% %Transitive Verb% the %Noun%.",
-      "The %Adjective% %Noun% %Prepositional Verb% the %Adjective% %Noun%."
+      "Draw a %BasicAdjective% %BasicNoun% %BasicIntransitiveVerb%.",
+      "Draw a %BasicAdjective% %BasicNoun% with a %BasicObject%.",
+      "Draw a %BasicNoun% and a %BasicCompanion% %SharedActivity%.",
+      "Challenge: draw a %ChallengeAdjective% %ChallengeNoun% with a %ChallengeObject%."
     ]
   ],
   [
-    "Adjective",
+    "BasicAdjective",
     [
-      "big",
-      "small",
-      "red",
-      "tan",
-      "glad",
-      "silly",
-      "sunny",
-      "brave",
-      "kind",
-      "quick",
-      "soft",
-      "smart"
+      "happy",
+      "sleepy",
+      "striped",
+      "sparkly",
+      "muddy",
+      "cheerful",
+      "curious",
+      "playful",
+      "tiny",
+      "brave"
     ]
   ],
   [
-    "Transitive Verb",
+    "ChallengeAdjective",
     [
-      "hugs",
-      "helps",
-      "pats",
-      "feeds",
-      "finds",
-      "pokes",
-      "sees",
-      "tells",
-      "holds",
-      "brings",
-      "shows",
-      "draws",
-      "hands",
-      "gives",
-      "packs"
+      "adventurous",
+      "mysterious",
+      "robotic",
+      "shimmering",
+      "fearless",
+      "whimsical"
     ]
   ],
   [
-    "Prepositional Verb",
+    "BasicNoun",
     [
-      "jumps over",
-      "looks at",
-      "plays with",
-      "runs with",
-      "sits by",
-      "waves to",
-      "walks with",
-      "stands by"
+      "puppy",
+      "kitten",
+      "robot",
+      "butterfly",
+      "pirate",
+      "astronaut",
+      "dinosaur",
+      "artist",
+      "baker",
+      "firefighter"
     ]
   ],
   [
-    "Noun",
+    "ChallengeNoun",
     [
-      "cat",
-      "dog",
-      "frog",
-      "kid",
-      "bird",
-      "duck",
-      "fish",
-      "pig",
-      "hen",
-      "bat",
-      "bug",
-      "fox",
-      "pup",
-      "pal",
-      "mom",
-      "dad"
+      "dragon",
+      "scientist",
+      "mermaid",
+      "inventor",
+      "superhero",
+      "magician",
+      "explorer"
     ]
   ],
   [
-    "Intransitive Verb",
+    "BasicCompanion",
     [
-      "runs",
-      "hops",
-      "hums",
-      "sits",
-      "spins",
-      "grins",
-      "plays",
-      "jogs",
-      "drums",
-      "claps",
-      "skips",
-      "smiles",
-      "stands",
-      "marches"
+      "best friend",
+      "pet turtle",
+      "grandparent",
+      "teacher",
+      "robot buddy",
+      "baby sibling"
+    ]
+  ],
+  [
+    "BasicIntransitiveVerb",
+    [
+      "jumping",
+      "dancing",
+      "spinning",
+      "singing",
+      "balancing",
+      "clapping",
+      "stretching",
+      "waving",
+      "skipping"
+    ]
+  ],
+  [
+    "BasicObject",
+    [
+      "kite",
+      "giant cupcake",
+      "garden",
+      "toy robot",
+      "storybook",
+      "treasure chest",
+      "snowman",
+      "basket of fruit",
+      "puzzle",
+      "flower crown"
+    ]
+  ],
+  [
+    "ChallengeObject",
+    [
+      "lost robot",
+      "hidden treasure",
+      "ancient book",
+      "secret doorway",
+      "glowing crystal",
+      "mystery map"
+    ]
+  ],
+  [
+    "SharedActivity",
+    [
+      "playing catch",
+      "sharing a picnic",
+      "building a tall tower",
+      "painting a mural",
+      "reading a big book",
+      "flying kites"
+    ]
+  ],
+  [
+    "Modifiers",
+    [
+      "Add a bright rainbow.",
+      "Include three stars.",
+      "Draw a tiny ladybug.",
+      "Give the sun sunglasses.",
+      "Add a patterned border.",
+      "Place a friendly sign."
     ]
   ]
 ]);
