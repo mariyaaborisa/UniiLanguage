@@ -1,7 +1,7 @@
 /* -------- Backgrounds ------------*/
 body {
     background-image:url('./images/backgrounds/background3.gif'); animation-direction: alternate; background-repeat: repeat;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Fredoka', 'Open Sans', sans-serif;
 }
 
 body.drawing1 {
@@ -30,7 +30,7 @@ div.drawingSquare {
 
 div.drawingSquare h1 {
     position: absolute;
-    font-family: 'Open Sans';
+    font-family: 'Fredoka', 'Open Sans', sans-serif;
     font-style: normal;
     font-size: 26px;
     left: 5%;
@@ -48,7 +48,7 @@ div.drawingSquare img {
 div.drawingSquare div.prompt {
     position: absolute;
     font-size: 48px;
-    font-family: 'Open Sans';
+    font-family: 'Fredoka', 'Open Sans', sans-serif;
     margin-left: 5%;
     top: 10%;
 }
@@ -76,7 +76,7 @@ div.h2pSquare h1{
     left: 30%;
     top: 30%;
 
-    font-family: 'Open Sans';
+    font-family: 'Fredoka', 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
@@ -92,7 +92,7 @@ div.h2pSquare p{
     left:15%;
     top: 45%;
 
-    font-family: 'Open Sans';
+    font-family: 'Fredoka', 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -119,7 +119,7 @@ button.next{
     border-radius: 20px;
     border: 0mm;
 
-    font-family: 'Open Sans';
+    font-family: 'Fredoka', 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -237,7 +237,7 @@ div.endScreen {
     box-shadow: 10px 17px 0px #E3E3E3;
     border-radius: 30px;
 
-    font-family: 'Open Sans';
+    font-family: 'Fredoka', 'Open Sans', sans-serif;
     font-style: normal;
     text-align: center;
 }
@@ -269,7 +269,7 @@ div.endScreen button {
     border-radius: 20px;
     border: 0mm;
 
-    font-family: 'Open Sans';
+    font-family: 'Fredoka', 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -330,7 +330,7 @@ div.endScreen img {
 }
 
 .round-transition__title {
-    font-family: 'Open Sans';
+    font-family: 'Fredoka', 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: clamp(1.25rem, 2.6vw, 1.75rem);
@@ -340,7 +340,7 @@ div.endScreen img {
 }
 
 .round-transition__subtitle {
-    font-family: 'Open Sans';
+    font-family: 'Fredoka', 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: clamp(1rem, 2.2vw, 1.125rem);
@@ -359,7 +359,7 @@ div.endScreen img {
     flex: 1 1 100%;
     border-radius: 16px;
     padding: 0.85rem 1.25rem;
-    font-family: 'Open Sans';
+    font-family: 'Fredoka', 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1rem;
