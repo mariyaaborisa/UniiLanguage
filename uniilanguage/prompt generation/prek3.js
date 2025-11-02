@@ -2,10 +2,10 @@ const prek3 = new Map([
   [
     "Formats",
     [
-      "Draw a %BasicAdjective% %BasicNoun% who is %BasicIntransitiveVerb%.",
-      "Draw a %BasicAdjective% %BasicNoun% who is %BasicTransitiveVerb% a %BasicObject%.",
-      "Draw a scene with a %BasicNoun% and their %BasicCompanion% %SharedActivity%.",
-      "Challenge yourself: draw a %ChallengeAdjective% %ChallengeNoun% who is %ChallengeTransitiveVerb% a %ChallengeObject%."
+      "Draw a %BasicAdjective% %BasicNoun% %BasicIntransitiveVerb%.",
+      "Draw a %BasicAdjective% %BasicNoun% with a %BasicObject%.",
+      "Draw a %BasicNoun% and a %BasicCompanion% %SharedActivity%.",
+      "Challenge: draw a %ChallengeAdjective% %ChallengeNoun% with a %ChallengeObject%."
     ]
   ],
   [
@@ -87,30 +87,6 @@ const prek3 = new Map([
     ]
   ],
   [
-    "BasicTransitiveVerb",
-    [
-      "painting",
-      "holding",
-      "fixing",
-      "sharing",
-      "carrying",
-      "decorating",
-      "planting",
-      "watching"
-    ]
-  ],
-  [
-    "ChallengeTransitiveVerb",
-    [
-      "discovering",
-      "exploring",
-      "studying",
-      "protecting",
-      "unlocking",
-      "investigating"
-    ]
-  ],
-  [
     "BasicObject",
     [
       "kite",
@@ -150,12 +126,12 @@ const prek3 = new Map([
   [
     "Modifiers",
     [
-      "Add a bright rainbow in the sky.",
-      "Include three twinkling stars somewhere in the picture.",
-      "Draw a tiny ladybug hiding nearby.",
-      "Give the sun a pair of sunglasses.",
-      "Add a patterned border around the page.",
-      "Place a helpful sign with a fun message in the scene."
+      "Add a bright rainbow.",
+      "Include three stars.",
+      "Draw a tiny ladybug.",
+      "Give the sun sunglasses.",
+      "Add a patterned border.",
+      "Place a friendly sign."
     ]
   ]
 ]);
