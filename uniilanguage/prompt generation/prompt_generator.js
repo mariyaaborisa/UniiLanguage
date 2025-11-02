@@ -56,7 +56,8 @@ function buildPrompt(promptset) {
     resolved = resolved.concat(substitution);
   }
 
-  return resolved;
+  const cleaned = resolved.replace(/\s+/g, " ").trim();
+  return appendModifier(cleaned, promptset);
 }
 
 function resolveFormat(placeholder, promptset) {
@@ -70,6 +71,22 @@ function resolveFormat(placeholder, promptset) {
 
 function randomSelect(options) {
   return options[Math.floor(Math.random() * options.length)];
+}
+
+function appendModifier(basePrompt, promptset) {
+  const modifiers = promptset.get("Modifiers");
+  if (!modifiers || modifiers.length === 0) {
+    return basePrompt;
+  }
+
+  const shouldAddModifier = Math.random() < 0.5;
+  if (!shouldAddModifier) {
+    return basePrompt;
+  }
+
+  const modifier = randomSelect(modifiers);
+  const separator = basePrompt.endsWith(".") ? " " : ". ";
+  return `${basePrompt}${separator}${modifier}`;
 }
 
 function goToNextRound(target) {
