@@ -139,33 +139,87 @@ img.character1 {
     margin-right: auto;
     width: 25%;
 }
- /* ------ Home Screen -- */
+/* ------ Home Screen -- */
 
-p.intro {
-    position: absolute;
-    width: 675px;
-    height: 0;
-    left: 32%;
-    top: 44%;
-
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 22px;
-    /* identical to box height, or 61% */
-
-    text-align: center;
-    letter-spacing: 0.1px;
-
-    color: #000000;
-
+body.home-page {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    box-sizing: border-box;
+    background-color: #ffffff;
 }
 
-img.logo {
-    position: absolute;
-    left: 35%;
-    top: 35%;
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+    text-align: center;
+    width: min(100%, 420px);
+}
+
+.home-logo {
+    width: min(60vw, 320px);
+    height: auto;
+}
+
+.home-intro {
+    margin: 0;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.4;
+    font-weight: 600;
+    color: #000000;
+}
+
+.home-cta-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+button.next.home-next {
+    position: static;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+button.next.home-next:focus-visible {
+    outline: 3px solid #2C2CFF;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    body.home-page {
+        padding: 2rem 1.25rem;
+    }
+
+    .home-container {
+        gap: 1.5rem;
+    }
+
+    button.next.home-next {
+        font-size: 1.125rem;
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-intro {
+        font-size: 1.35rem;
+    }
+
+    button.next.home-next {
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+    }
 }
 
 /* -------- End Screen -----------*/
