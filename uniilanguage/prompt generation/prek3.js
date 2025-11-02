@@ -13,15 +13,13 @@ const prek3 = new Map([
       "big",
       "small",
       "red",
-      "blue",
-      "happy",
+      "tan",
+      "glad",
       "silly",
       "sunny",
-      "calm",
+      "brave",
       "kind",
       "quick",
-      "bright",
-      "brave",
       "soft",
       "smart"
     ]
@@ -31,19 +29,19 @@ const prek3 = new Map([
     [
       "hugs",
       "helps",
+      "pats",
       "feeds",
       "finds",
-      "pats",
+      "pokes",
       "sees",
-      "spots",
       "tells",
       "holds",
       "brings",
       "shows",
       "draws",
-      "teaches",
-      "carries",
-      "shares"
+      "hands",
+      "gives",
+      "packs"
     ]
   ],
   [
@@ -69,14 +67,15 @@ const prek3 = new Map([
       "bird",
       "duck",
       "fish",
-      "bear",
-      "lion",
-      "zebra",
-      "fox",
       "pig",
       "hen",
-      "coach",
-      "nurse"
+      "bat",
+      "bug",
+      "fox",
+      "pup",
+      "pal",
+      "mom",
+      "dad"
     ]
   ],
   [
@@ -84,18 +83,18 @@ const prek3 = new Map([
     [
       "runs",
       "hops",
-      "sings",
-      "reads",
+      "hums",
       "sits",
       "spins",
       "grins",
       "plays",
-      "writes",
-      "drinks",
+      "jogs",
+      "drums",
       "claps",
-      "laughs",
       "skips",
-      "smiles"
+      "smiles",
+      "stands",
+      "marches"
     ]
   ]
 ]);

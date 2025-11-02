@@ -11,12 +11,12 @@
     <body class = "drawing1" style="background-color:#DCF9DF;">
         <div class="drawingSquare">
             <h1> Draw: </h1>
-            <div class="prompt">
+            <div class="prompt" role="status" aria-live="polite">
                 <script src='../prompt generation/prompt_generator.js'></script>
                 <script src='../prompt generation/prek3.js'></script>
                 <script>document.write(getPassedPrompt())</script>
             </div>
-            <img src="../images/timer gifs/timer60.gif">
+            <img src="../images/timer gifs/timer60.gif" alt="Timer counting down from sixty seconds" loading="lazy">
         </div>
         <canvas id="canvas" style="border:1px solid"></canvas>
 		<span class="blackbg" id="myPopupBlackBg"></span>
@@ -28,14 +28,14 @@
 			</span>
 			</p>
 		</span>
-		<span class="popup1" onclick="location.href='../src/End_screen.html'">
-			<button class="popuptext" id="myPopup1">Finish Game</button>
-		</span>
-		<span class="popup2" onclick="onSave()">
-			<button class="popuptext" id="myPopup2">Save Drawing</button>
-		</span>
+                <span class="popup1" onclick="location.href='../src/End_screen.html'">
+                        <button class="popuptext" id="myPopup1" type="button">Finish Game</button>
+                </span>
+                <span class="popup2" onclick="onSave()">
+                        <button class="popuptext" id="myPopup2" type="button">Save Drawing</button>
+                </span>
         <br>
-        <button hidden="hidden" id="save">Save Drawing</button>
+        <button hidden="hidden" id="save" type="button">Save Drawing</button>
         <script src="../drawing javscript files/drawing60.js"></script>
     </body>
 </html>
