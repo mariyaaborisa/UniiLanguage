@@ -19,23 +19,20 @@
             <img src="../images/timer gifs/timer10.gif" alt="Timer counting down from ten seconds" loading="lazy">
         </div>
         <canvas id="canvas" style="border:1px solid"></canvas>
-		<span class="blackbg" id="myPopupBlackBg"></span>
-		<span class="popupbg" id="myPopupBg"></span>
-		<span class="popup0">
-			<p class="popuptext" id="myPopup0">Great Job!<br><br>
-			<span style="color: #676767;font-family: 'Open Sans';font-style: normal;font-weight: 700;font-size: 24px;line-height: 22px">
-			You will have 30 seconds to draw it again next round.
-			</span>
-			</p>
-		</span>
-                <span class="popup1" onclick="goToNextRound('../src/Drawing_30_sec.html')">
-                        <button class="popuptext" id="myPopup1" type="button">Next Round!</button>
-                </span>
-                <span class="popup2" onclick="onSave()">
-                        <button class="popuptext" id="myPopup2" type="button">Save Drawing</button>
-                </span>
-        <br>
-        <button hidden="hidden" id="save" type="button">Save Drawing</button>
+        <div class="round-transition" id="roundTransition" hidden aria-hidden="true">
+            <div class="round-transition__text" role="status" aria-live="assertive">
+                <h2 class="round-transition__title">Nice start!</h2>
+                <p class="round-transition__subtitle">Next up, you'll have 30 seconds to add more detail to this drawing.</p>
+            </div>
+            <div class="round-transition__actions">
+                <button class="round-transition__button round-transition__button--primary" id="nextRoundButton" type="button" onclick="goToNextRound('../src/Drawing_30_sec.html')">
+                    Go to the 30-second round
+                </button>
+                <button class="round-transition__button round-transition__button--secondary" id="saveDrawingButton" type="button">
+                    Save this drawing
+                </button>
+            </div>
+        </div>
         <script src="../drawing javscript files/drawing10.js"></script>
     </body>
 </html>
